@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigadeiros  Dreams</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/Brigadeiros.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Brigadeiros Dreams</a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="sobre nos.html">Sobre nós</a>
+                <a href="encomendas.html">Encomendas</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="servico.html">Serviços</a>
+            </div>
+        </div>
+    </header>
+    <section class="Home">
+        <video class="video-slide active" src="imagens/video5.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="imagens/video2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="imagens/video3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="imagens/video4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="imagens/video1.mp4" autoplay muted loop></video>
+
+        <div class="content">
+            <h1>Os Melhores<br><span>Brigadeiros</span></h1>
+            <p>Na Brigadeiros Dreams, mergulhamos na arte de criar momentos deliciosos e memoráveis. Somos apaixonados por transformar simples momentos em celebrações inesquecíveis, e o nosso segredo está nos brigadeiros irresistíveis que preparamos com amor e dedicação.</p>
+            <a href="sobre nos.html">Ler Mais</a>
+        </div>
+        <div class="media-icons">
+            <a href="https://www.facebook.com/brigadeirosdreamss" target="_blank"><img src="imagens/icon_facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/brigadeirosdreamss/" target="_blank"><img src="imagens/icon_instagram.png" alt="instagram"></a>
+            <a href="https://brigadeirosdreams.carrd.co/" target="_blank"><img src="imagens/icon_whatsapp.png" alt="whatsapp"></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script>
+        //JAVASCRIPT PARA O VIDEO//
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+
+
+         var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            })
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            })
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+
+         }
+
+         btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+         });
+    </script>
+</body>
+</html>
